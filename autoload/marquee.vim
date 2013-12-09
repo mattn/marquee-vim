@@ -60,13 +60,13 @@ function! marquee#items()
   return s:feed
 endfunction
 
-function! marquee#update(key)
-  if a:key == ""
-    let &updatetime = s:updatetime
-    let &lazyredraw = s:lazyredraw
-    let s:updatetime = -1
-    return
-  endif
+function! marquee#stop()
+  let &updatetime = s:updatetime
+  let &lazyredraw = s:lazyredraw
+  let s:updatetime = -1
+endfunction
+
+function! marquee#update()
   if s:updatetime == -1
     let s:updatetime = &updatetime
     let s:lazyredraw = &lazyredraw
@@ -92,5 +92,5 @@ function! marquee#update(key)
     let text = s:S.wrap(s:title, &columns)[0]
     redraw | echon text
   endif
-  call feedkeys(a:key, 'n')
+  silent call feedkeys(mode() ==# 'i' ? "\<c-g>\<esc>" : "g\<esc>", 'n')
 endfunction

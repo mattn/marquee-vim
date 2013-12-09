@@ -2,14 +2,14 @@ function! s:marquee(on)
   augroup marquee
     autocmd!
     if a:on
-      autocmd CursorHold   * call marquee#update("g\<ESC>")
-      autocmd CursorHoldI  * call marquee#update("\<C-g>\<ESC>")
-      autocmd CursorMoved  * call marquee#update("")
-      autocmd CursorMovedI * call marquee#update("")
-      autocmd CmdwinEnter  * call marquee#update("")
-      autocmd CmdwinLeave  * call marquee#update("")
-      autocmd WinEnter     * call marquee#update("")
-      autocmd WinLeave     * call marquee#update("")
+      autocmd CursorHold   * call marquee#update()
+      autocmd CursorHoldI  * call marquee#update()
+      autocmd CursorMoved  * call marquee#stop()
+      autocmd CursorMovedI * call marquee#stop()
+      autocmd CmdwinEnter  * call marquee#stop()
+      autocmd CmdwinLeave  * call marquee#stop()
+      autocmd WinEnter     * call marquee#stop()
+      autocmd WinLeave     * call marquee#stop()
     endif
   augroup END
 endfunction
