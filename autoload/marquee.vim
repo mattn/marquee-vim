@@ -70,7 +70,6 @@ function! marquee#update()
   if s:updatetime == -1
     let s:updatetime = &updatetime
     let s:lazyredraw = &lazyredraw
-    return
   endif
   set updatetime=50 lazyredraw
 
