@@ -8,7 +8,7 @@
 
 # Requirements
 
-* [vimtal.vim](https://github.com/vim-jp/vital.vim)
+* [vital.vim](https://github.com/vim-jp/vital.vim)
 
 # License
 
