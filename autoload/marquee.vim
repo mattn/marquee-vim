@@ -1,4 +1,4 @@
-let s:V = vital#of('vital')
+let s:V = vital#of('marquee')
 let s:S = s:V.import("Data.String")
 let s:X = s:V.import("Web.XML")
 let s:title = ''
