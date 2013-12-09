@@ -55,7 +55,7 @@ endfunction
 
 function! marquee#items()
   if !exists('s:feed')
-    let s:feed = s:parseFeed('http://www.kyodo.co.jp/feed/')
+    let s:feed = s:parseFeed(get(g:, 'marquee_feed_url', 'http://www.kyodo.co.jp/feed/'))
   endif
   return s:feed
 endfunction
