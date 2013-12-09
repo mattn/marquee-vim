@@ -1,6 +1,6 @@
 # marquee-vim
 
-![](https://raw.github.com/mattn/smarquee-vim/master/doc/marquee-vim.gif)
+![](https://raw.github.com/mattn/marquee-vim/master/doc/marquee-vim.gif)
 
 # Usage
 
